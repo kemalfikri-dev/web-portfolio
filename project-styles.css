@@ -1,0 +1,166 @@
+:root {
+  --color-accent: #5eead4;
+  --color-highlight: #e2e8f0;
+  --background-accent: rgba(45, 212, 191, .1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'inter';
+}
+
+body {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+p, 
+h2{
+  line-height: 1.5rem;
+}
+
+p::selection, 
+h1::selection, 
+h2::selection, 
+h3::selection, 
+h4::selection, 
+h5::selection, 
+h6::selection {
+  background: var(--color-accent);
+  color: #0f172a;
+}
+
+.underlay{
+  position: fixed;
+  background-color: #172554;
+  inset: 0;
+  opacity: 0.15;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 0.25rem;
+}
+
+header h1,
+.lightText {
+  color: var(--color-highlight);
+}
+
+header h4 {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.back-to-web {
+    position: relative;
+    margin-left: auto;
+    margin-right: 62%;
+}
+
+.back-to-web span {
+    transition-duration: 200ms;
+}
+
+.back-to-web:hover span {
+    padding-right: 0.25rem;
+}
+
+
+.anchor-text-project {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+.project-sticky-header {
+    display: flex;
+    gap: 2rem;
+    color: var(--color-highlight);
+    font-weight: 600;
+    margin-top: 3.5rem;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.bottom-line {
+    margin-top: 1rem;
+    height: 1px;
+    border: none;
+    background-color: var(--color-highlight);
+    opacity: 0.1;
+    margin-bottom: 0;
+}
+
+.project-stat,
+.project-link {
+    display: none;
+}
+
+.anchor-text-project-list {
+    text-decoration: none;
+    color: var(--color-highlight);
+    opacity: 0.6;
+}
+
+.anchor-text-project-list:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+
+.project-list {
+    display: grid;
+     grid-template-columns: 80px 1fr 100px;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    transition-duration: 200ms;
+    align-items: center;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: var(--color-highlight);
+}
+
+.project-list a:hover {
+    color: var(--color-accent);
+}
+
+.project-personal-link {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .project-link, .project-personal-link {
+    display: unset;
+}
+    .project-link {
+        margin-left: 45%;
+    }
+    .project-personal-link {
+        margin-left: inherit;
+
+    }
+}
